@@ -7,10 +7,7 @@ import java.util.List;
 
 @Service
 public class ReviewService {
-    @Autowired
-    private ReviewRepository reviewRepository;
-
-    public List<Review> allReviews(){
-        return reviewRepository.findAll();
+    public Review createReview(String reviewBody, String imdbId){
+        Review review = new Review();
     }
 }
