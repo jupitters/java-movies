@@ -7,7 +7,12 @@ import java.util.List;
 
 @Service
 public class ReviewService {
+    @Autowired
+    private ReviewRepository reviewRepository;
+
     public Review createReview(String reviewBody, String imdbId){
         Review review = new Review(reviewBody);
+
+        reviewRepository.insert(review);
     }
 }
